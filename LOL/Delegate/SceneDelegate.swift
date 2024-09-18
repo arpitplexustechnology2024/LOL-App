@@ -33,7 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         for urlContext in URLContexts {
             ApplicationDelegate.shared.application(UIApplication.shared, open: urlContext.url, options: [:])
         }
-    }   
+    }
     
     func sceneDidBecomeActive(_ scene: UIScene) {
         if savedShortCutItem != nil {

@@ -3228,6 +3228,9 @@ when you ask questions to create a card!</string>
             <point key="canvasLocation" x="5471" y="1310"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="OtJ-KK-8Y4"/>
+    </designables>
     <resources>
         <image name="Anonyms" width="159" height="159"/>
         <image name="Block.Card" width="22" height="22"/>

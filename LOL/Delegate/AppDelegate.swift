@@ -10,6 +10,7 @@ import CoreData
 import FirebaseCore
 import UserNotifications
 import FBSDKCoreKit
+import OneSignalFramework
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         registerForPushNotifications()
         FirebaseApp.configure()
+        OneSignal.Debug.setLogLevel(.LL_VERBOSE)
+        OneSignal.initialize("bd3921d2-a2f7-44fb-862f-8ab87e37f09e", withLaunchOptions: launchOptions)
+        OneSignal.Notifications.requestPermission({ accepted in
+            print("User accepted notifications: \(accepted)")
+        }, fallbackToSettings: true)
         return true
     }
     

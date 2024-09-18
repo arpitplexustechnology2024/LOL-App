@@ -172,6 +172,46 @@ PODS:
     - nanopb/encode (= 2.30910.0)
   - nanopb/decode (2.30910.0)
   - nanopb/encode (2.30910.0)
+  - OneSignal/OneSignal (5.2.4):
+    - OneSignal/OneSignalCore
+    - OneSignal/OneSignalExtension
+    - OneSignal/OneSignalLiveActivities
+    - OneSignal/OneSignalNotifications
+    - OneSignal/OneSignalOSCore
+    - OneSignal/OneSignalOutcomes
+    - OneSignal/OneSignalUser
+  - OneSignal/OneSignalCore (5.2.4)
+  - OneSignal/OneSignalExtension (5.2.4):
+    - OneSignal/OneSignalCore
+    - OneSignal/OneSignalOutcomes
+  - OneSignal/OneSignalInAppMessages (5.2.4):
+    - OneSignal/OneSignalCore
+    - OneSignal/OneSignalNotifications
+    - OneSignal/OneSignalOSCore
+    - OneSignal/OneSignalOutcomes
+    - OneSignal/OneSignalUser
+  - OneSignal/OneSignalLiveActivities (5.2.4):
+    - OneSignal/OneSignalCore
+    - OneSignal/OneSignalOSCore
+    - OneSignal/OneSignalUser
+  - OneSignal/OneSignalLocation (5.2.4):
+    - OneSignal/OneSignalCore
+    - OneSignal/OneSignalNotifications
+    - OneSignal/OneSignalOSCore
+    - OneSignal/OneSignalUser
+  - OneSignal/OneSignalNotifications (5.2.4):
+    - OneSignal/OneSignalCore
+    - OneSignal/OneSignalExtension
+    - OneSignal/OneSignalOutcomes
+  - OneSignal/OneSignalOSCore (5.2.4):
+    - OneSignal/OneSignalCore
+  - OneSignal/OneSignalOutcomes (5.2.4):
+    - OneSignal/OneSignalCore
+  - OneSignal/OneSignalUser (5.2.4):
+    - OneSignal/OneSignalCore
+    - OneSignal/OneSignalNotifications
+    - OneSignal/OneSignalOSCore
+    - OneSignal/OneSignalOutcomes
   - PromisesObjC (2.4.0)
   - PromisesSwift (2.4.0):
     - PromisesObjC (= 2.4.0)
@@ -190,6 +230,9 @@ DEPENDENCIES:
   - FirebaseAuth
   - GoogleMLKit/FaceDetection
   - lottie-ios
+  - OneSignal/OneSignal (< 6.0, >= 5.0.0)
+  - OneSignal/OneSignalInAppMessages (< 6.0, >= 5.0.0)
+  - OneSignal/OneSignalLocation (< 6.0, >= 5.0.0)
   - SDWebImage
   - TTGSnackbar
 
@@ -225,6 +268,7 @@ SPEC REPOS:
     - MLKitFaceDetection
     - MLKitVision
     - nanopb
+    - OneSignal
     - PromisesObjC
     - PromisesSwift
     - RecaptchaInterop
@@ -262,12 +306,13 @@ SPEC CHECKSUMS:
   MLKitFaceDetection: 7c0e8bf09ddd27105da32d088fca978a99fc30cc
   MLKitVision: e858c5f125ecc288e4a31127928301eaba9ae0c1
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
+  OneSignal: f804466dc7afd3645b0838d10c6b7616d574af1d
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   PromisesSwift: 9d77319bbe72ebf6d872900551f7eeba9bce2851
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   SDWebImage: 8a6b7b160b4d710e2a22b6900e25301075c34cb3
   TTGSnackbar: 8e7650b9b1f5f44e40228473455986f5c12213c7
 
-PODFILE CHECKSUM: 7e3ab024be7aca2eb59ddd7e0755d845df2818ec
+PODFILE CHECKSUM: fa1cea99a864135ea18cef20608dcd33bfd298df
 
 COCOAPODS: 1.15.2

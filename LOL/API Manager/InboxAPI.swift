@@ -44,7 +44,7 @@ class InboxApiService: InboxApiServiceProtocol {
     }
     
     func updateInboxStatus(inboxId: String, completion: @escaping (Result<InboxUpdateCardShow, any Error>) -> Void) {
-        let url = "https://lolcards.link/api/inbox/update"
+        let url = "https://lolcards.link/api/inbox/read/update"
         let parameters: [String: String] = [
             "inboxId": inboxId,
             "read": "true"

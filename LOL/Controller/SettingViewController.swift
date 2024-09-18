@@ -48,17 +48,9 @@ class SettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         localizeUI()
         seupViewAction()
         pauseLinkAPICall()
-    }
-    
-    func setupUI() {
-        let views = [pauseView, premiumView, reviewAppView, followInstagramView, shareAppView, needHelpView, privacyPolicyView, deleteAccountView]
-        views.forEach { view in
-            view?.backgroundColor = traitCollection.userInterfaceStyle == .dark ? UIColor.systemGray6 : UIColor.white
-        }
     }
     
     func seupViewAction() {

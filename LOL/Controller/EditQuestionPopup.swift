@@ -66,7 +66,7 @@ class EditQuestionPopup: UIViewController, UITextFieldDelegate {
             countTextLabel.textColor = .boadercolor
         } else {
             editQuestionTextFiled.layer.borderWidth = 0
-            countTextLabel.textColor = .black
+            countTextLabel.textColor = .whiteBlack
         }
     }
     

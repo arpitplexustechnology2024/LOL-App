@@ -128,7 +128,7 @@
 
 // Premium View Controller
 "UnlockBtnKey" = "غیر مقفل کریں۔";
-"PremiumFeaturesKey" = "👉پرو خصوصیات ₹299.00 زندگی بھر کے لیے👈";
+"PremiumFeaturesKey" = "👉%@ میں زندگی بھر کے لیے پرو فیچرز👈";
 "PremiumTitleKey1" = "بھیجنے والے کا پروفائل ظاہر کریں۔";
 "PremiumTitleKey2" = "ناظرین کے اشارے";
 "PremiumTitleKey3" = "کارڈ کے سوالات میں ترمیم کریں۔";

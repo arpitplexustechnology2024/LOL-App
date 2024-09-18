@@ -21,6 +21,8 @@ class PreviewViewController: UIViewController {
     @IBOutlet weak var card_BGView: UIView!
     @IBOutlet weak var card_ImageView: UIImageView!
     @IBOutlet weak var card_ProfileImageView: UIImageView!
+    @IBOutlet weak var watermarkView: UIView!
+    @IBOutlet weak var watermarkImage: UIImageView!
     @IBOutlet weak var card_textView: UIView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var showProfieButton: UIButton!
@@ -105,15 +107,19 @@ class PreviewViewController: UIViewController {
             case 1136, 1334, 1920, 2208:
                 width = 100
                 height = 100
-                fontSize = 14
-            case 2436, 2688, 1792, 2556, 2796, 2778, 2532:
+                fontSize = 10
+            case 2436, 2688, 1792, 2556:
+                width = 150
+                height = 150
+                fontSize = 13
+            case 2796, 2778, 2532:
                 width = 170
                 height = 170
-                fontSize = 16
+                fontSize = 15
             default:
                 width = 150
                 height = 150
-                fontSize = 15
+                fontSize = 13
             }
         }
         

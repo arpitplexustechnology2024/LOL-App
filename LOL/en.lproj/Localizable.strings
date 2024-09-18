@@ -128,7 +128,7 @@
 
 // Premium View Controller
 "UnlockBtnKey" = "Unlock";
-"PremiumFeaturesKey" = "👉pro features for ₹299.00 lifetime👈";
+"PremiumFeaturesKey" = "👉pro features for %@ lifetime👈";
 "PremiumTitleKey1" = "Reveal Sender Profile";
 "PremiumTitleKey2" = "Viewers Hints";
 "PremiumTitleKey3" = "Edit Card Questions";

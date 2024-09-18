@@ -180,12 +180,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BD4CF1992C9B4C6100102DD7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		30678C63B9012164A50C10C0 /* Pods_LOL_LOLUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LOL_LOLUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F015E7301B9F6328E4B82E4 /* Pods-LOL-LOLUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOL-LOLUITests.debug.xcconfig"; path = "Target Support Files/Pods-LOL-LOLUITests/Pods-LOL-LOLUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3FAB1D42B5D01EA6C09840C4 /* Pods-LOLTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLTests.release.xcconfig"; path = "Target Support Files/Pods-LOLTests/Pods-LOLTests.release.xcconfig"; sourceTree = "<group>"; };
 		4050498B6B33161237640C08 /* Pods-LOLTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLTests.debug.xcconfig"; path = "Target Support Files/Pods-LOLTests/Pods-LOLTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61667FE9E7AB1E75D1BF5B4A /* Pods-LOL-LOLUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOL-LOLUITests.release.xcconfig"; path = "Target Support Files/Pods-LOL-LOLUITests/Pods-LOL-LOLUITests.release.xcconfig"; sourceTree = "<group>"; };
+		69DFF2DAC46250B00007FD35 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C87CA559C069DA68A2E42C9 /* Pods_LOL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LOL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EEA0BE6AB786A95E377EE3 /* Pods-LOL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOL.release.xcconfig"; path = "Target Support Files/Pods-LOL/Pods-LOL.release.xcconfig"; sourceTree = "<group>"; };
 		7D5C17D37530D687F06A8F05 /* Pods_LOLTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LOLTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -361,6 +375,8 @@
 		BDD9405F2C93CBCB0044D954 /* EditQuestionPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuestionPopup.swift; sourceTree = "<group>"; };
 		BDDD55A82C925F33008ECEBB /* PurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewModel.swift; sourceTree = "<group>"; };
 		BDDD55AA2C925F3E008ECEBB /* PurchaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseAPI.swift; sourceTree = "<group>"; };
+		C9F5D80F34E6EEC124B315D3 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		EA02066815A8085A448D83DF /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -399,6 +415,7 @@
 				6C87CA559C069DA68A2E42C9 /* Pods_LOL.framework */,
 				30678C63B9012164A50C10C0 /* Pods_LOL_LOLUITests.framework */,
 				7D5C17D37530D687F06A8F05 /* Pods_LOLTests.framework */,
+				69DFF2DAC46250B00007FD35 /* Pods_OneSignalNotificationServiceExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -412,6 +429,8 @@
 				61667FE9E7AB1E75D1BF5B4A /* Pods-LOL-LOLUITests.release.xcconfig */,
 				4050498B6B33161237640C08 /* Pods-LOLTests.debug.xcconfig */,
 				3FAB1D42B5D01EA6C09840C4 /* Pods-LOLTests.release.xcconfig */,
+				EA02066815A8085A448D83DF /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				C9F5D80F34E6EEC124B315D3 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -753,6 +772,7 @@
 				E0F9ADC93C6D15F4DA29A48F /* [CP] Embed Pods Frameworks */,
 				A2902A9A2E402B0DE741B5E9 /* [CP] Copy Pods Resources */,
 				BD4446BA2C8F9D90004B598A /* ShellScript */,
+				BD4CF1992C9B4C6100102DD7 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);

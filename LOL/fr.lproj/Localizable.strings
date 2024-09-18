@@ -128,7 +128,7 @@
 
 // Premium View Controller
 "UnlockBtnKey" = "Ouvrir";
-"PremiumFeaturesKey" = "👉Fonctionnalités pro pour ₹299.00 à vie👈";
+"PremiumFeaturesKey" = "👉Fonctionnalités pro pour %@ à vie👈";
 "PremiumTitleKey1" = "Révéler le profil de l'expéditeur";
 "PremiumTitleKey2" = "Conseils aux téléspectateurs";
 "PremiumTitleKey3" = "Modifier les questions de la carte";

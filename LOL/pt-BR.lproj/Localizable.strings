@@ -128,7 +128,7 @@
 
 // Premium View Controller
 "UnlockBtnKey" = "Desbloquear";
-"PremiumFeaturesKey" = "👉recursos pro por ₹299.00 vitalício👈";
+"PremiumFeaturesKey" = "👉recursos pro por %@ vitalício👈";
 "PremiumTitleKey1" = "Revelar Perfil do Remetente";
 "PremiumTitleKey2" = "Dicas dos Visualizadores";
 "PremiumTitleKey3" = "Editar Perguntas do Cartão";

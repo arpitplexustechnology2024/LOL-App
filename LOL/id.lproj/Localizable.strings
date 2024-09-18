@@ -128,7 +128,7 @@
 
 // Premium View Controller
 "UnlockBtnKey" = "Buka";
-"PremiumFeaturesKey" = "👉fitur pro seharga ₹299.00 seumur hidup👈";
+"PremiumFeaturesKey" = "👉fitur pro seharga %@ seumur hidup👈";
 "PremiumTitleKey1" = "Ungkap Profil Pengirim";
 "PremiumTitleKey2" = "Petunjuk Penonton";
 "PremiumTitleKey3" = "Edit Pertanyaan Kartu";

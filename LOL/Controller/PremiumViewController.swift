@@ -10,7 +10,7 @@ import StoreKit
 import TTGSnackbar
 import Alamofire
 
-class PremiumViewController: UIViewController, SKPaymentTransactionObserver {
+class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKProductsRequestDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -26,7 +26,7 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver {
         }
     }
     
-    private var autoScrollTimer: Timer?
+    private var product: SKProduct?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -51,16 +51,14 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver {
         super.viewDidLoad()
         setupUI()
         adjustForDevice()
-        startAutoScroll()
-        setupproFeaturesLabel()
+        fetchProductInfo()
         self.unlockButton.layer.cornerRadius = self.unlockButton.frame.height / 2
-        unlockButton.frame = CGRect(x: (view.frame.width - 326) / 2, y: view.center.y - 27, width: 326, height: 55)
+        unlockButton.frame = CGRect(x: (view.frame.width - 326) / 2, y: view.center.y - 25, width: 326, height: 50)
         self.unlockButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
         SKPaymentQueue.default().add(self)
     }
     
     private func setupUI() {
-        
         premiumSlider = [
             PremiumModel(id: 1, title: "Reveal Sender Profile",
                          description: "Get hints like their image, location, device, lol id and more...",
@@ -83,6 +81,40 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver {
     private func isConnectedToInternet() -> Bool {
         let networkManager = NetworkReachabilityManager()
         return networkManager?.isReachable ?? false
+    }
+    
+    private func fetchProductInfo() {
+        if SKPaymentQueue.canMakePayments() {
+            let request = SKProductsRequest(productIdentifiers: Set([productID]))
+            request.delegate = self
+            request.start()
+        }
+    }
+    
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        if let product = response.products.first {
+            self.product = product
+            DispatchQueue.main.async {
+                self.updateProFeaturesLabel()
+            }
+        }
+    }
+    
+    private func updateProFeaturesLabel() {
+        if let product = self.product {
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .currency
+            numberFormatter.locale = product.priceLocale
+            if let formattedPrice = numberFormatter.string(from: product.price) {
+                let localizedFormat = NSLocalizedString("PremiumFeaturesKey", comment: "Format string for pro features with price for lifetime")
+                let attributedString = NSMutableAttributedString(string: String(format: localizedFormat, formattedPrice))
+                if let range = attributedString.string.range(of: formattedPrice) {
+                    let nsRange = NSRange(range, in: attributedString.string)
+                    attributedString.addAttribute(.foregroundColor, value: UIColor.red, range: nsRange)
+                }
+                self.proFeaturesLabel.attributedText = attributedString
+            }
+        }
     }
     
     // MARK: - Purchase Premium Features
@@ -141,9 +173,10 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver {
                 customAlertVC.image = UIImage(named: "PurchaseFailed")
                 
                 self.present(customAlertVC, animated: true) {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         customAlertVC.animateDismissal {
                             customAlertVC.dismiss(animated: false, completion: nil)
+                            self.dismiss(animated: true)
                         }
                     }
                 }
@@ -160,31 +193,6 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver {
         }
         let indexPath = IndexPath(item: currentPage, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-    }
-    
-    func setupproFeaturesLabel() {
-        let fullText = NSLocalizedString("PremiumFeaturesKey", comment: "")
-        let attributedString = NSMutableAttributedString(string: fullText)
-        let range = (fullText as NSString).range(of: "₹299.00")
-        attributedString.addAttribute(.foregroundColor, value: UIColor.red, range: range)
-        proFeaturesLabel.attributedText = attributedString
-        unlockButton.setTitle(NSLocalizedString("UnlockBtnKey", comment: ""), for: .normal)
-    }
-    
-    private func startAutoScroll() {
-        autoScrollTimer = Timer.scheduledTimer(withTimeInterval: 4.0, repeats: true) { [weak self] _ in
-            self?.moveToNext()
-        }
-    }
-    
-    private func stopAutoScroll() {
-        autoScrollTimer?.invalidate()
-        autoScrollTimer = nil
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        stopAutoScroll()
     }
     
     func adjustForDevice() {
